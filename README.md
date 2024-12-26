@@ -1,5 +1,9 @@
 # environment setup
 
+### installation du requirements
+```python
+pip install -r requirements.txt
+```
 ### activation du virtual environment
 ```python
 .venv\Scripts\Activate.ps1
