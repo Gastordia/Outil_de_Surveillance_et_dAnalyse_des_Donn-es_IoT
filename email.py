@@ -48,8 +48,8 @@ def create_pdf_from_csv(csv_file, output_pdf):
 # Function to send email with the PDF attachment
 def send_email(pdf_file):
     # Email configuration (use your own details)
-    sender_email = "pythonproject.enset@gmai.com"
-    receiver_email = "machnaoui.abdellatif2005@gmail.com"
+    sender_email = "sender_email@gmai.com"
+    receiver_email = "receiver_email@gmail.com"
     subject = "IoT Device Data Report"
     body = "Please find the attached IoT Device Data report."
 
@@ -74,7 +74,7 @@ def send_email(pdf_file):
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)  # For Gmail
         server.starttls()
-        server.login(sender_email, "pythonproject1234")  # Use an app-specific password if 2FA is enabled
+        server.login(sender_email, "password")  # Use an app-specific password if 2FA is enabled
         server.sendmail(sender_email, receiver_email, msg.as_string())
         server.close()
         print("Email sent successfully!")
